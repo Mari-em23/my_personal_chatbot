@@ -1,7 +1,9 @@
 Project's description :
 A completely free RAG with searching capabilities for broke people.
+
 Architecture :
-The system 
+(image)
+
 
 Preconfiguration :
 To ensure the chatbot works correctly, create a virtual environment via this command in the root directory :
@@ -21,6 +23,7 @@ Pull the model (required before running the app)
 ```
 ollama pull llama3.2:3b 
 
+```
 PS : you can choose any model you like, I chose llama 3.2 3B because it works well on my machine.
 
 Second, you need to install the requirements :
@@ -28,6 +31,7 @@ Second, you need to install the requirements :
 ```
 pip install -r requirements.txt
 
+```
 
 Except if you want to keep working with the sample data, modify the internal_data.txt, configuration_data/mission.txt and configuration_data/rules.txt files according to your needs.
 
@@ -43,7 +47,8 @@ Now every time you want to run the app :
 ```
 python -m Flask.app 
 
+```
 Notes :
-Be specific if you want your chatbot to search something (it is quite dumb)
+Be specific if you want your chatbot to search something (it is quite dumb).
 No matter how long the conversation is, only 60 messages are displayed.
-The chatbot forgets the conversation if the session changes
+The chatbot forgets the conversation if the session changes.
