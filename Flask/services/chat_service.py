@@ -38,7 +38,7 @@ general_chain = general_prompt | llm | StrOutputParser()
 
 def process_message(message, history):
     chat_history = format_history(history)
-    action = route_query(message, chat_history)
+    action = route_query(message, chat_history[-100:])
     mission, rules = load_config()
 
     db_sources = []

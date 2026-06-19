@@ -17,25 +17,14 @@ router_prompt = PromptTemplate(
         Chat history:
         {chat_history}
 
-        User message:
+        User message and the message that should determine your output: 
         {message}
 
         Choose ONE:
         - SEARCH: user EXPLICITLY asks to search, look up, or find information
-        - NONE: everything else
+        - NONE: everything else or if you are unsure, even slightly unsure
 
-        Examples of NONE:
-        - "hello", "ok", "noooo", "I don't believe you", "thanks"
-        - "what year is it?" (answer from date context above)
-        - "no its 2027!" (user correction, not a search request)
-        - "what did we talk about?" (answer from chat history)
-
-        Examples of SEARCH:
-        - "search for tunisian recipes"
-        - "find information about TOPNET hack"
-        - "look up the latest cybersecurity news"
-
-        NO UNNECESSARY SEARCH ALLOWED
+        UNNECESSARY SEARCH IS STRICTLY PROHIBITED
         Return ONLY one word: SEARCH or NONE
         """
 )
