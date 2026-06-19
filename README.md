@@ -8,10 +8,11 @@ A completely free RAG with searching capabilities for broke people.
 ## Preconfiguration :
 To ensure the chatbot works correctly, 
 <ul>
-<li>create a virtual environment via this command in the root directory :
+<li>create a virtual environment and activate it via these command in the root directory :
 
 ```
 python -m venv .venv
+./.venv/Scripts/activate
 ```
 </li>
 <li>Install Ollama
@@ -32,14 +33,14 @@ PS : you can choose any model you like, I chose llama 3.2 3B because it works we
 pip install -r requirements.txt
 ```
 </li>
-<li>Except if you want to keep working with the sample data, modify the internal_data.txt, configuration_data/mission.txt and configuration_data/rules.txt files depending on your needs.</li>
+<li>Except if you want to keep working with the sample data, modify the <b>internal_data.txt</b>, <b>configuration_data/mission.txt</b> and <b>configuration_data/rules.txt</b> files according to your needs.</li>
 
 ### VERY IMPORTANT STEPS :
 
 <li>Run create_db_and_table to set your infrastructure with :
 
 ```
-python create_db_and_table.py
+python SQLite/create_db_and_table.py
 ```
 </li>
 <li>Run embeddings_generator with :
