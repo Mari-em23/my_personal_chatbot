@@ -1,11 +1,11 @@
-Project's description :
+## Project's description :
 A completely free RAG with searching capabilities for broke people.
 
-Architecture :
-(image)
+## Architecture :
+<img src="architecture.png" width="600"/>
 
 
-Preconfiguration :
+## Preconfiguration :
 To ensure the chatbot works correctly, create a virtual environment via this command in the root directory :
 
 ```
@@ -14,11 +14,11 @@ python -m venv .venv
 ```
 
 Install Ollama
-
+<br>
 Follow the official installation guide:
 https://ollama.com
 
-Pull the model (required before running the app)
+Pull the model
 
 ```
 ollama pull llama3.2:3b 
@@ -35,11 +35,18 @@ pip install -r requirements.txt
 
 Except if you want to keep working with the sample data, modify the internal_data.txt, configuration_data/mission.txt and configuration_data/rules.txt files according to your needs.
 
-VERY IMPORTANT STEPS :
-    Run create_db_and_table to set your infrastructure.
-    Run embeddings_generator.
+<b>VERY IMPORTANT STEPS :</b>
+<br>
+    Run create_db_and_table to set your infrastructure with :
+    ```
+    python create_db_and_table.py
+    ```
+    Run embeddings_generator.py with :
+    ```
+    python embeddings_generator.py
+    ```
 
-Running the app :
+## Running the app :
 Now every time you want to run the app :
 1. Activate ollama
 2. Run the Flask app with this exact command in the root folder:
@@ -48,7 +55,8 @@ Now every time you want to run the app :
 python -m Flask.app 
 
 ```
-Notes :
-Be specific if you want your chatbot to search something (it is quite dumb).
+### Notes :
+<br>
+Be specific if you want your chatbot to search something (it is quite dumb, mainly an architectural issue).
 No matter how long the conversation is, only 60 messages are displayed.
-The chatbot forgets the conversation if the session changes.
+The chat history does not persist, it changes every session (new session_id = new empty thread).
