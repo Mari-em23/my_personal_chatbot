@@ -100,7 +100,7 @@ def search_with_details(query, top_k=10):
                 "passage": passage,
                 "score": score
             })
-    print("I have searched :" + query +" in the internal DB")
+    print("I searched :" + query +" in the internal DB")
     print(final_results)
 
     return final_results

@@ -21,8 +21,8 @@ router_prompt = PromptTemplate(
         {message}
 
         Choose ONE:
-        - SEARCH: user explicitly asks to search, look up, or find information
-        - NONE: everything else — greetings, corrections, reactions, casual chat, simple questions the assistant can answer from context or common knowledge
+        - SEARCH: user EXPLICITLY asks to search, look up, or find information
+        - NONE: everything else
 
         Examples of NONE:
         - "hello", "ok", "noooo", "I don't believe you", "thanks"
@@ -35,6 +35,7 @@ router_prompt = PromptTemplate(
         - "find information about TOPNET hack"
         - "look up the latest cybersecurity news"
 
+        NO UNNECESSARY SEARCH ALLOWED
         Return ONLY one word: SEARCH or NONE
         """
 )
