@@ -1,7 +1,7 @@
 import sqlite3
 
 def create_database():
-    connection = sqlite3.connect("database.db")
+    connection = sqlite3.connect("SQLite/database.db")
     cursor = connection.cursor()
 
     cursor.execute("""
