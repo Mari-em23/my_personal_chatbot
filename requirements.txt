@@ -1,0 +1,9 @@
+langchain
+langchain-core
+sentence-transformers
+langchain-ollama
+numpy
+crawl4ai
+ddgs
+
+flask

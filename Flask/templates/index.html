@@ -1,0 +1,38 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My personal chatbot</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+        <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+
+    </head>
+    <body>
+        <div id="chat-widget">
+            <div class="card">
+                <div class="card-header">
+                    <span>My personal chatbot</span>
+                </div>
+                <div id="chat-body">
+                    <div id="chat-messages"></div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" id="chat-input"
+                            placeholder="Ask about anything, if search needed, explicitly say so..."
+                            onkeypress="if(event.key==='Enter') sendMessage()">
+                        <button class="btn-chat" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    
+</html>
