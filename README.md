@@ -1,5 +1,5 @@
 ## Project's description :
-A completely free RAG with searching capabilities for broke people.
+A hybrid, agentic RAG inference pipeline with query routing and multi-source retrieval.
 
 ## Architecture :
 <img src="architecture.png" width="600"/>
